@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+   
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+     background: url('clockwhite.jpg') no-repeat center center/cover;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+.hour,.minute,.second{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hour,.hr{
+    height: 190px;
+    width: 190px;
+    
+    
+}
+.minute,.min{
+    height: 290px;
+    width: 290px;
+    
+    
+}
+.second,.sec{
+    height: 340px;
+    width: 340px;
+    
+    
+}
+.hr,.min,.sec{
+    display: flex;
+    justify-content: center;
+    
+}
+.hr::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+.min::before{
+    content: '';
+    position: absolute;
+    height: 150px;
+    width: 6px;
+    background-color: black;
+    border-radius: 50%;
+}
+.sec::before{
+    content: '';
+    position: absolute;
+    height: 190px;
+    width: 3px;
+    background-color: black;
+    border-radius: 50%;
+}
+
