@@ -1,0 +1,27 @@
+:root{
+    --base-color: #ffc600;
+    --spacing: 10px;
+    --blur: 4px;
+}
+img{
+    padding: var(--spacing);
+    background :var(--base-color);
+    filter: blur(var(--blur));
+    background-size: cover;
+}
+.primary{
+    color: var(--base-color);
+}
+body{
+    text-align: center;
+    font-size: 30px;
+    background: rgb(54, 54, 54);
+    color: white;
+}
+.controls{
+    margin-bottom: 50px;
+}
+
+input{
+    width: 100px;
+}
