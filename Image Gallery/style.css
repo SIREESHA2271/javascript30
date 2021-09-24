@@ -1,0 +1,37 @@
+body{
+    margin: 10px;
+    padding: 0;
+    background: #333;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+}
+.container{
+    max-width: 430px;
+    margin: auto;
+    border: 1px solid white;
+    background: white;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+@keyframes fade {
+    to{
+        opacity: 1;
+    }
+}
+
+.fade{
+    opacity: 0.8;
+    animation: fade 0.5s ease-in 1 forwards;
+}
