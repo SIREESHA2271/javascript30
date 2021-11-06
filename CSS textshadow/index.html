@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS text shadow on slide</title>
+</head>
+<body>
+    <div class="hero">
+        <h2 contenteditable>Helloooooo</h2>
+
+    </div>
+    
+<style>
+    .hero{
+        display: flex;
+        height: 100vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        font-size: 60px;
+        text-shadow: 10px 10px 0 rgba(0,0,0,1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+    
+    <script>
+
+    const hero = document.querySelector('.hero');
+    const text = hero.querySelector('h2');
+    const walk = 100;
+
+    function shadow(e){
+        
+        const { offsetWidth: width, offsetHeight: height } = hero;
+        let { offsetX: x, offsetY: y } = e;
+
+        if(this !== e.target){
+            x = x + e.target.offsetLeft;
+            y = y + e.target.offsetTop;
+        }
+    
+    const xwalk = Math.round((x/width*walk) - (walk/2));
+    const ywalk = Math.round((y/height*walk) - (walk/2));
+
+    text.style.textShadow = `
+      ${xwalk}px ${ywalk}px 0 red,
+      ${ywalk}px ${xwalk*-1}px 0 orange,
+      ${ywalk*-1}px ${xwalk}px 0 lightgreen,
+      ${xwalk*-1}px ${ywalk}px 0 yellow
+    `;
+}
+
+    hero.addEventListener('mousemove',shadow);
+</script>
+</body>
+
+
+
+
+</html>
